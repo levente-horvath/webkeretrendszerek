@@ -1,2 +1,2 @@
-# Projekt: LakasDekoracio
+# Projekt: Lakás dekoráció webshop
 
