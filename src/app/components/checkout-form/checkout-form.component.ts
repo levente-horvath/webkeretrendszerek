@@ -10,7 +10,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Router, RouterLink } from '@angular/router';
-import { CartService, CartItem } from '../../services/cart.service';
+import { CartService } from '../../services/cart.service';
+import { CartItem } from '../../models/cart-item.interface';
 import { CurrencyFormatPipe } from '../../pipes/currency-format.pipe';
 import { OrderService, Order } from '../../services/order.service';
 

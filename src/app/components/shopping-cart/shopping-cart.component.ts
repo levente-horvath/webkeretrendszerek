@@ -6,7 +6,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { CurrencyFormatPipe } from '../../pipes/currency-format.pipe';
-import { CartService, CartItem } from '../../services/cart.service';
+import { CartService } from '../../services/cart.service';
+import { CartItem } from '../../models/cart-item.interface';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -153,7 +154,7 @@ export class ShoppingCartComponent implements OnInit {
 
   ngOnInit(): void {
     // Subscribe to cart changes
-    this.cartService.cartItems$.subscribe(items => {
+    this.cartService.cartItems$.subscribe((items: CartItem[]) => {
       this.cartItems = items;
       this.total = this.cartService.getCartTotal();
     });

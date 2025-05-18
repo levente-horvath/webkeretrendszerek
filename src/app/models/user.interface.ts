@@ -14,4 +14,5 @@ export interface User {
     updatedAt: Date;
     wishlist: string[]; // Product IDs
     orderHistory: string[]; // Order IDs
+    isAdmin: boolean;
 } 

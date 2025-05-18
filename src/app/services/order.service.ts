@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { CartItem } from './cart.service';
+import { CartItem } from '../models/cart-item.interface';
 
 export interface OrderCustomer {
   fullName: string;

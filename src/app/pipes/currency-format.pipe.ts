@@ -6,13 +6,16 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CurrencyFormatPipe implements PipeTransform {
   transform(value: number): string {
-    const formatter = new Intl.NumberFormat('hu-HU', {
+    if (value === undefined || value === null) {
+      return '';
+    }
+    
+    // Format the number as currency (HUF)
+    return new Intl.NumberFormat('hu-HU', {
       style: 'currency',
       currency: 'HUF',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0
-    });
-    
-    return formatter.format(value);
+    }).format(value);
   }
 }
